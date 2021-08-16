@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ElectronicQueue.App">
+    <Position X="4" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Controls.BluredTextButton">
+    <Position X="2.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAQAAAAAAAAAAAAAIAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Controls\BluredTextButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Controls.CornerTextBox">
+    <Position X="2.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABgAAAAAAAAAAAAEAAAAAAAIAABBBAAAAg=</HashCode>
+      <FileName>Controls\CornerTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Controls.DatePickerWatermarked">
+    <Position X="7.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAIAAAAIA=</HashCode>
+      <FileName>Controls\DatePickerWatermarked.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Controls.IconButton">
+    <Position X="9.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAACAADAAAAASAAgAEAAAA=</HashCode>
+      <FileName>Controls\IconButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Controls.ItemButton">
+    <Position X="11" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABAA=</HashCode>
+      <FileName>Controls\ItemButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.ApplicationContext">
+    <Position X="4" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAACAAAAAAAQAAAAAAAAAAAgAAAAAAAgQAAAAQAAA=</HashCode>
+      <FileName>DataBase\ApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.Adres">
+    <Position X="5.75" Y="7.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ElectronicQueue.DataBase.Models.Adres.AdresProperties" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataBase\Models\Adress.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAIAAAAEAAAAAAAAQAgAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Models\Adress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.Cabinet">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ElectronicQueue.DataBase.Models.Cabinet.CabinetProperties" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataBase\Models\Cabinet.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAQAAEAEAAAAAEAAAABAAAABAAAAAQAAA=</HashCode>
+      <FileName>DataBase\Models\Cabinet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.Doctor">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ElectronicQueue.DataBase.Models.Doctor.DoctorProperties" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataBase\Models\Doctor.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.562" />
+        <Point X="5.627" Y="5.562" />
+        <Point X="5.627" Y="2.717" />
+        <Point X="5.75" Y="2.717" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AhAAAAIQAAAAAAAECAACAAgEAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Models\Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.Polyclinic">
+    <Position X="14.5" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ElectronicQueue.DataBase.Models.Polyclinic.PolyclinicProperties" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataBase\Models\Polyclinic.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="6.188" />
+        <Point X="14.377" Y="6.188" />
+        <Point X="14.377" Y="2.525" />
+        <Point X="14.5" Y="2.525" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAQAAEAEAAAAAAQAAAAAAAABAAIAAQAAA=</HashCode>
+      <FileName>DataBase\Models\Polyclinic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.Role">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ElectronicQueue.DataBase.Models.Role.RoleProperties" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataBase\Models\Role.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAAAAiAAAEIAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Models\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.Speciality">
+    <Position X="14.5" Y="7.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ElectronicQueue.DataBase.Models.Speciality.SpecialityProperties" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataBase\Models\Speciality.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="6.747" />
+        <Point X="3" Y="6.914" />
+        <Point X="15.25" Y="6.914" />
+        <Point X="15.25" Y="7.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAAIAAEAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Models\Speciality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.Ticket">
+    <Position X="11" Y="7.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ElectronicQueue.DataBase.Models.Ticket.TicketProperties" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataBase\Models\Ticket.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAAAAAEAAECAAAAAgABAAAAAQAAIAAAAAQAAA=</HashCode>
+      <FileName>DataBase\Models\Ticket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.User">
+    <Position X="9.25" Y="7.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ElectronicQueue.DataBase.Models.User.UserProperties" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DataBase\Models\User.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACACAAAkCQAAQA0AAEAMAAACQAAAAgAAAAA=</HashCode>
+      <FileName>DataBase\Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.GridModels.CabinetGridItem">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQEAAAEBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Models\GridModels\CabinetGridItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.GridModels.DoctorGridItem">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.562" />
+        <Point X="8.25" Y="5.562" />
+        <Point X="8.25" Y="3.463" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAGAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Models\GridModels\DoctorGridItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.GridModels.SpecialityGridItem">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.562" />
+        <Point X="10" Y="5.562" />
+        <Point X="10" Y="3.463" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAAAAAEAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Models\GridModels\SpecialityGridItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.DataBase.Models.GridModels.UserGridItem">
+    <Position X="18" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="6.188" />
+        <Point X="17.877" Y="6.188" />
+        <Point X="17.877" Y="2.107" />
+        <Point X="18" Y="2.107" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAECAAAAAwAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Models\GridModels\UserGridItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Images.Icons.Add" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAACAADAAAAASAAgAEAAAA=</HashCode>
+      <FileName>Images\Icons\Add.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Images.Icons.Edit" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAgACAABAAAAAABAgAAAAAA=</HashCode>
+      <FileName>Images\Icons\Edit.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Images.Icons.Exit" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAACAABAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Images\Icons\Exit.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Images.Icons.Logout" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAgACAABAAAAAABAgAAAAAA=</HashCode>
+      <FileName>Images\Icons\Logout.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Images.Icons.Minimize" BaseTypeListCollapsed="true">
+    <Position X="11" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAACAABAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Images\Icons\Minimize.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Images.Icons.Question" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAACAABAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Images\Icons\Question.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Models.AppointmentGridItem">
+    <Position X="16.25" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="6.188" />
+        <Point X="16.127" Y="6.188" />
+        <Point X="16.127" Y="2.107" />
+        <Point X="16.25" Y="2.107" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAgAAAEAAAAAAAAAAAAAAAAAQAAAAEAAAA=</HashCode>
+      <FileName>Models\AppointmentGridItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Models.DateConverter">
+    <Position X="5.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAQAAAAAA=</HashCode>
+      <FileName>Models\DateConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Models.DoctorName">
+    <Position X="12.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIACAAQEAgAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DoctorName.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ElectronicQueue.Models.MailManager">
+    <Position X="4" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAABAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Models\MailManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Models.MailValidator">
+    <Position X="11" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Models\MailValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Models.NotificationManager">
+    <Position X="5.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAATAEAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Models\NotificationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Models.UCPGridItem">
+    <Position X="2.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQACAAA=</HashCode>
+      <FileName>Models\UCPGridItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Properties.Resources">
+    <Position X="2.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Properties.Settings">
+    <Position X="4" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.ViewModels.AdminPanelVM">
+    <Position X="22" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="6.747" />
+        <Point X="3" Y="6.944" />
+        <Point X="19.886" Y="6.944" />
+        <Point X="19.886" Y="13.17" />
+        <Point X="22.75" Y="13.17" />
+        <Point X="22.75" Y="0.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>oQSAACEAAEAwD4QEBB+AQIASCFCgAIAAq5ABCgKQAAE=</HashCode>
+      <FileName>ViewModels\AdminPanelVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.ViewModels.AppointmentWindowVM">
+    <Position X="20" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQMAQAEQADAACAAgIAhEQAQACEAUBQAAAgABAEIHACA=</HashCode>
+      <FileName>ViewModels\AppointmentWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.ViewModels.AuthorizeWindowVM">
+    <Position X="16.25" Y="7.25" Width="1.5" />
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="6.747" />
+        <Point X="3" Y="6.925" />
+        <Point X="17" Y="6.925" />
+        <Point X="17" Y="7.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAAAAgAAAEQAAgBAQAAAAEAAAABAAAAAA=</HashCode>
+      <FileName>ViewModels\AuthorizeWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.ViewModels.BaseVM">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BaseVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ElectronicQueue.ViewModels.EmailConfirmationWindowVM">
+    <Position X="7.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAACAQAAAoAAQACAAAAQAAEAAAIAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\EmailConfirmationWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.ViewModels.MainWindowVM">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEEBghACEEIOAgBQBgAEQAIQDAAAAAkAABAQAAAQAZA=</HashCode>
+      <FileName>ViewModels\MainWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.ViewModels.PasswordRecoveryWindowVM">
+    <Position X="11" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.562" />
+        <Point X="11.75" Y="5.562" />
+        <Point X="11.75" Y="3.848" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAACAAoAAAACAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\PasswordRecoveryWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.ViewModels.RegistrationWindowVM">
+    <Position X="12.75" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="ElectronicQueue.ViewModels.BaseVM" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.562" />
+        <Point X="8.25" Y="5.562" />
+        <Point X="8.25" Y="5.562" />
+        <Point X="12.75" Y="5.562" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAgAAAEQBwgBEQMAAAEAAAUAAAEEAA=</HashCode>
+      <FileName>ViewModels\RegistrationWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.ViewModels.UCPWindowVM">
+    <Position X="18.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAEACAACAAgAAgAQgQAAEAEiAACAAAAAgAAIAE=</HashCode>
+      <FileName>ViewModels\UCPWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElectronicQueue.Views.AdminPanelWindow" BaseTypeListCollapsed="true">
+    <Position X="4" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AdminPanelWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Views.AppointmentWindow" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AppointmentWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Views.AuthorizeWindow" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AuthorizeWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Views.EmailConfirmationWindow" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\EmailConfirmationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Views.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Views.PasswordRecoveryWindow" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\PasswordRecoveryWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Views.RegistrationWindow" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\RegistrationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ElectronicQueue.Views.UCPWindow" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\UCPWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

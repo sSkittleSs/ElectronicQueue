@@ -1,0 +1,36 @@
+﻿<Window x:Class="ElectronicQueue.Views.EmailConfirmationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElectronicQueue.Views"
+        xmlns:controls="clr-namespace:ElectronicQueue.Controls"
+        mc:Ignorable="d"
+        Title="EmailConfirmationWindow" Height="125" Width="400" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="Transparent">
+
+    <Grid Width="Auto" Height="Auto">
+        <Border Background="White" CornerRadius="5" BorderThickness="2" BorderBrush="{Binding BorderBrush, Mode=OneWay}"/>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="15"/>
+            </Grid.RowDefinitions>
+
+            <controls:IconButton Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource ExitButton}" Width="15" Command="{Binding Exit}"/>
+            <StackPanel Grid.Row="0"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Код отправлен на почту " FontSize="12"/>
+                <TextBlock Text="{Binding Email, Mode=OneWay}" FontSize="12" FontWeight="DemiBold"/>
+                
+            </StackPanel>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <controls:CornerTextBox Style="{StaticResource CornerBorderDownTextBox}" Text="{Binding ConfirmationCode, UpdateSourceTrigger=PropertyChanged}" WatermarkText="Введите код, отправленный на почту" Width="250" HorizontalContentAlignment="Center"/>
+                <controls:BluredTextButton Content="Отправить код повторно" Command="{Binding ResendLetter}" Style="{StaticResource BluredTextButton}" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="10" Margin="0 2 68 0"/>
+            </StackPanel>
+
+            <TextBlock Grid.Row="2" Text="Нажмите Enter чтобы продолжить......" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="10"/>
+
+            <controls:IconButton Grid.Row="2"  Command="{Binding Confirm}" Width="88" IsDefault="True"/>
+        </Grid>
+    </Grid>
+</Window>

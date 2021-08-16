@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ElectronicQueue.Views.AuthorizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElectronicQueue.Views"
+        xmlns:uc="clr-namespace:ElectronicQueue.Controls"
+        mc:Ignorable="d" Height="370" Width="794">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <uc:CornerTextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" WatermarkText="Введите почту или логин" Style="{StaticResource CornerTextBox}" Width="250" Margin="0 5"/>
+            <Grid>
+                <PasswordBox x:Name="pwdBox" Style="{StaticResource PasswordBox}" Width="250" Margin="0 5" PasswordChanged="PasswordBox_PasswordChanged"/>
+                <TextBlock x:Name="wtrMarkBox" Text="Введите пароль" IsHitTestVisible="False">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Foreground" Value="#66535559"/>
+                            <Setter Property="FontSize" Value="12.8"/>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 -2 0 5">
+                <uc:BluredTextButton Content="Забыли пароль?" Style="{StaticResource BluredTextButton}" Margin="0 0 5 0" Command="{Binding PasswordRecovery}"/>
+                <uc:BluredTextButton Content="Создать учётную запись" Style="{StaticResource BluredTextButton}" Margin="5 0 0 0" Command="{Binding OpenRegistation, Mode=OneWay}"/>
+            </StackPanel>
+            <Button Content="Войти" Style="{StaticResource Button}" Margin="0 5" Command="{Binding Authorize, Mode=OneWay}" IsDefault="True"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

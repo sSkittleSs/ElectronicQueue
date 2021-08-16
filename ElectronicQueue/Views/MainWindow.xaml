@@ -1,0 +1,83 @@
+﻿<Window x:Class="ElectronicQueue.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElectronicQueue.Views" 
+        xmlns:controls="clr-namespace:ElectronicQueue.Controls" 
+        xmlns:notify="clr-namespace:Notifications.Wpf.Controls;assembly=Notifications.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="{Binding WindowHeight, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="{Binding WindowWidth, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" AllowsTransparency="True" WindowStyle="None" Background="Transparent" WindowStartupLocation="CenterScreen" MinHeight="{Binding MinHeight}" MinWidth="{Binding MinWidth}">
+    
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" GlassFrameThickness="0" CornerRadius="0" />
+    </WindowChrome.WindowChrome>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderBrush="#FF535353" Background="#FFF0F0F0" BorderThickness="1.5" Grid.RowSpan="2" CornerRadius="2"/>
+
+        <!--UpperPanel-->
+        <Grid Grid.Row="0" Margin="3 3 3 0" MouseDown="UpperPanel_MouseDown">
+            <Border BorderBrush="#FF535353" Background="#FFC4C4C4" BorderThickness="0 0 0 1" Grid.ColumnSpan="2"/>
+            <TextBlock Text="Электронная очередь" Padding="5" Foreground="Black" FontWeight="DemiBold" FontSize="12" VerticalAlignment="Center"/>
+
+            <!-- Control buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <controls:IconButton Height="23" Margin="3 4" Style="{StaticResource QuestionButton}" Command="{Binding Help, Mode=OneWay}"/>
+                <controls:IconButton Height="23" Margin="3 4" Style="{StaticResource MinimizeButton}" Command="{Binding MinimizeApplication, Mode=OneWay}"/>
+                <controls:IconButton Height="23" Margin="3 4 6 4" Style="{StaticResource ExitButton}" Command="{Binding CloseApplication, Mode=OneWay}"/>
+            </StackPanel>
+        </Grid>
+
+        <!--MiddlePanel (Content)-->
+        <Grid Grid.Row="1" Margin="3 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="46"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <!--#region Menu-->
+            <Border Grid.Row="0" BorderBrush="#FF535353" Background="#FFFFF4F4" BorderThickness="0 0 0 1"/>
+            <controls:IconButton Grid.Row="0" Height="35" Margin="10 0" Style="{StaticResource LogoutButton}" Command="{Binding Logout, Mode=OneWay}"/>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <controls:ItemButton Content="Авторизация" Style="{StaticResource ItemButtonStyleBeforeConnect1}" Command="{Binding OpenAuthorize, Mode=OneWay}"/>
+                <controls:ItemButton Content="Регистрация" Style="{StaticResource ItemButtonStyleBeforeConnect2}" Command="{Binding OpenRegistation, Mode=OneWay}" Margin="10 0"/>
+                
+                <controls:ItemButton Content="Запись на прием" Style="{StaticResource ItemButtonStyleAfterConnect1}" Command="{Binding OpenAppointment, Mode=OneWay}" Margin="10 0"/>
+                <controls:ItemButton Content="Личный кабинет" Style="{StaticResource ItemButtonStyleAfterConnect2}" Command="{Binding OpenUCP, Mode=OneWay}" Margin="10 0"/>
+                <controls:ItemButton Content="Панель администратора" Style="{StaticResource ItemButtonAdminPanel}" Command="{Binding OpenAdminPanel, Mode=OneWay}" Margin="10 0"/>
+            </StackPanel>
+            <!--#endregion-->
+
+            <!--#region Тестовые элементы-->
+            <!--<GroupBox Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Header="Тестовые элементы">
+                <StackPanel Orientation="Vertical">
+                    <controls:CornerTextBox Text="" WatermarkText="Введите пароль (тест)" Style="{StaticResource CornerTextBox}" Margin="0 10"/>
+                    <controls:CornerTextBox Text="" WatermarkText="Фио" Style="{StaticResource CornerBorderDownTextBox}" Margin="0 10"/>
+                    <PasswordBox Password="123" Style="{StaticResource PasswordBox}" Margin="0 10"/>
+                    <Button Content="Войти" Style="{StaticResource Button}" Margin="0 10"/>
+                    <controls:BluredTextButton Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Забыли пароль?" Style="{StaticResource BluredTextButton}"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5">
+                        <controls:IconButton Style="{StaticResource AddButton}" Width="25" Margin="5 0"/>
+                        <controls:IconButton Style="{StaticResource EditButton}" Width="25" Margin="5 0"/>
+                        <controls:IconButton Style="{StaticResource ExitButton}" Width="25" Margin="5 0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5">
+                        <controls:IconButton Style="{StaticResource LogoutButton}" Width="25" Margin="5 0" Visibility="Visible"/>
+                        <controls:IconButton Style="{StaticResource MinimizeButton}" Width="25" Margin="5 0"/>
+                        <controls:IconButton Style="{StaticResource QuestionButton}" Width="25" Margin="5 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>-->
+            <!--#endregion-->
+
+            <UserControl Grid.Row="1" Content="{Binding CurrentView, UpdateSourceTrigger=PropertyChanged}" Background="Transparent" MaxWidth="{Binding MaxControlWidth}" MaxHeight="{Binding MaxControlHeight}"/>
+        </Grid>
+
+        <notify:NotificationArea Grid.Row="1" x:Name="WindowArea" Position="BottomRight" MaxItems="3"/>
+    </Grid>
+</Window>

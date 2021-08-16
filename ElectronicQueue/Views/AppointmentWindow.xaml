@@ -1,0 +1,98 @@
+﻿<UserControl
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElectronicQueue.Views" xmlns:controls="clr-namespace:ElectronicQueue.Controls"
+        x:Class="ElectronicQueue.Views.AppointmentWindow"
+        mc:Ignorable="d" MinHeight="370" MinWidth="794">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition />
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dgw" Grid.Row="1" Grid.Column="1" Style="{StaticResource DataGridStyle}" RowHeaderStyle="{StaticResource DataGridRowHeaderStyle}" SelectionMode="Single" SelectionUnit="Cell"
+                  CellStyle="{StaticResource DataGridCellStyle}" RowStyle="{StaticResource CenterGridRowStyle}" AutoGenerateColumns="False" 
+                  ItemsSource="{Binding Items, UpdateSourceTrigger=PropertyChanged}" CurrentCell="{Binding TicketSelectedItem, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Свободные талоны" Width="1*" Binding="{Binding FreeDate, UpdateSourceTrigger=PropertyChanged}" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+                <DataGridTextColumn Header="Занятые талоны" Width="1*" Binding="{Binding PrivatedDate, UpdateSourceTrigger=PropertyChanged}" HeaderStyle="{StaticResource CenterGridHeaderStyle}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="1" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Информация о специалисте" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="DemiBold" Margin="0 0 0 5"/>
+
+            <Grid Grid.Row="1" Margin="10 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="41"/>
+                    <RowDefinition Height="41"/>
+                    <RowDefinition Height="41"/>
+                    <RowDefinition Height="41"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Border BorderBrush="Black" BorderThickness="1" Margin="-1" Grid.RowSpan="4" Grid.ColumnSpan="3"/>
+
+                <TextBlock Grid.Row="0" Text="ФИО:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" FontWeight="DemiBold" Margin="5 0"/>
+                <TextBlock Grid.Row="1" Text="Тел. номер:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" FontWeight="DemiBold" Margin="5 0"/>
+                <TextBlock Grid.Row="2" Text="E-mail:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" FontWeight="DemiBold" Margin="5 0"/>
+                <TextBlock Grid.Row="3" Text="Специальность:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" FontWeight="DemiBold" Margin="5 0"/>
+
+                <controls:CornerTextBox Grid.Row="0" Grid.Column="1" Height="25" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource CornerBorderDownTextBox}" Width="Auto" HorizontalAlignment="Stretch" IsReadOnly="True"/>
+                <controls:CornerTextBox Grid.Row="1" Grid.Column="1" Height="25" Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource CornerBorderDownTextBox}" Width="Auto" HorizontalAlignment="Stretch" IsReadOnly="True"/>
+                <controls:CornerTextBox Grid.Row="2" Grid.Column="1" Height="25" Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource CornerBorderDownTextBox}" Width="Auto" HorizontalAlignment="Stretch" IsReadOnly="True"/>
+                <controls:CornerTextBox Grid.Row="3" Grid.Column="1" Height="25" Text="{Binding Speciality, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource CornerBorderDownTextBox}" Width="Auto" HorizontalAlignment="Stretch" IsReadOnly="True"/>
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="5 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="34"/>
+                </Grid.RowDefinitions>
+
+                <!--<ComboBox x:Name="polyc" Grid.Row="0" Height="25" Style="{DynamicResource ComboBox}" ItemsSource="{Binding Polyclinics, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding PolyclinicSelectedItem, UpdateSourceTrigger=PropertyChanged}" />-->
+                <ComboBox x:Name="special" Grid.Row="0" Height="25" Style="{DynamicResource ComboBox}" ItemsSource="{Binding Specialities, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SpecialitySelectedItem, UpdateSourceTrigger=PropertyChanged}" />
+                <ComboBox x:Name="docto" Grid.Row="1" Height="25" Style="{DynamicResource ComboBox}" ItemsSource="{Binding Doctors, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding DoctorSelectedItem, UpdateSourceTrigger=PropertyChanged}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <DockPanel>
+                                <TextBlock DockPanel.Dock="Left" Text="{Binding Path=Name}"/>
+                                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5 0">
+                                    <TextBlock Foreground="{Binding Path=LoadColor}" FontSize="12" Text="{Binding Path=Load}" FontWeight="Bold"/>
+                                    <TextBlock Foreground="{Binding Path=LoadColor}" FontSize="12" Text="%" FontWeight="Bold"/>
+                                </StackPanel>
+                            </DockPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <controls:IconButton Style="{StaticResource AddButtonConditioned}" Command="{Binding Add, Mode=OneWay}" Height="30" Margin="0 0 10 0"/>
+                    <controls:IconButton Style="{StaticResource BlueQuestionButton}" Command="{Binding Info, Mode=OneWay}" Height="30" Margin="0 0 10 0"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="ElectronicQueue.Views.AdminPanelWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:ElectronicQueue.Views" 
+            xmlns:controls="clr-namespace:ElectronicQueue.Controls"
+            xmlns:db="clr-namespace:ElectronicQueue.DataBase.Models"
+            mc:Ignorable="d" MinHeight="370" MinWidth="796">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <controls:ItemButton Content="Пользователи" Style="{StaticResource ItemButtonStyle1}" FontSize="16" Command="{Binding OpenUsers, Mode=OneWay}" Margin="10 0"/>
+            <controls:ItemButton Content="Талоны" Style="{StaticResource ItemButtonStyle2}" FontSize="16" Command="{Binding OpenTickets, Mode=OneWay}" Margin="10 0"/>
+            <controls:ItemButton Content="Доктора" Style="{StaticResource ItemButtonStyle3}" FontSize="16" Command="{Binding OpenDoctors, Mode=OneWay}" Margin="10 0"/>
+            <controls:ItemButton Content="Специальности" Style="{StaticResource ItemButtonStyle4}" FontSize="16" Command="{Binding OpenSpecialities, Mode=OneWay}" Margin="10 0"/>
+            <controls:ItemButton Content="Роли" Style="{StaticResource ItemButtonStyle5}" FontSize="16" Command="{Binding OpenRoles, Mode=OneWay}" Margin="10 0"/>
+            <controls:ItemButton Content="Поликлиники" Style="{StaticResource ItemButtonStyle6}" FontSize="16" Command="{Binding OpenPolyclinics, Mode=OneWay}" Margin="10 0"/>
+            <controls:ItemButton Content="Кабинеты" Style="{StaticResource ItemButtonStyle7}" FontSize="16" Command="{Binding OpenCabinets, Mode=OneWay}" Margin="10 0"/>
+            <controls:ItemButton Content="Адреса" Style="{StaticResource ItemButtonStyle8}" FontSize="16" Command="{Binding OpenAdresses, Mode=OneWay}" Margin="10 0"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Items, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" Style="{StaticResource DataGridStyle}" RowHeaderStyle="{StaticResource DataGridRowHeaderStyle}" ColumnHeaderStyle="{StaticResource CenterGridHeaderStyle}" RowStyle="{StaticResource CenterGridRowStyle}" CellStyle="{StaticResource DataGridCellStyle}" SelectionMode="Single" SelectionUnit="Cell" IsReadOnly="False"/>
+
+        <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 5" Style="{StaticResource StackPanel2}">
+            <controls:DatePickerWatermarked Grid.Row="2" Watermark="Дата" SelectedDate="{Binding SelectedDate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0 5 15 5" Width="100"/>
+            <StackPanel Orientation="Horizontal">
+                <controls:CornerTextBox Margin="0 0 5 0" Text="{Binding HoursStart, UpdateSourceTrigger=PropertyChanged}" WatermarkText="Часы начала" Style="{StaticResource CornerTextBox}" Width="100"/>
+                <controls:CornerTextBox Margin="5 0" Text="{Binding MinutesStart, UpdateSourceTrigger=PropertyChanged}" WatermarkText="Минуты начала" Style="{StaticResource CornerTextBox}" Width="100"/>
+                <controls:CornerTextBox Margin="5 0" Text="{Binding HoursEnd, UpdateSourceTrigger=PropertyChanged}" WatermarkText="Часы конца" Style="{StaticResource CornerTextBox}" Width="100"/>
+                <controls:CornerTextBox Margin="5 0" Text="{Binding MinutesEnd, UpdateSourceTrigger=PropertyChanged}" WatermarkText="Минуты конца" Style="{StaticResource CornerTextBox}" Width="100"/>
+                <controls:CornerTextBox Margin="5 0" Text="{Binding Step, UpdateSourceTrigger=PropertyChanged}" WatermarkText="Шаг" Style="{StaticResource CornerTextBox}" Width="100"/>
+                <ComboBox Margin="5 0" Width="100" Height="25" Style="{DynamicResource ComboBox}" ItemsSource="{Binding Doctors, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedDoctor, UpdateSourceTrigger=PropertyChanged}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <DockPanel>
+                                <TextBlock DockPanel.Dock="Left" Text="{Binding Path=Name}"/>
+                                <TextBlock DockPanel.Dock="Right" FontSize="12" Text="{Binding Path=DoctorId}" FontWeight="Bold" HorizontalAlignment="Right" Margin="5 0"/>
+                            </DockPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <Button Content="Добавить талоны" Style="{StaticResource Button}" Command="{Binding AddTickets}" Width="110" FontSize="12" Margin="10 0 0 0" VerticalAlignment="Top"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 5" Style="{StaticResource StackPanel3}">
+            <StackPanel Orientation="Horizontal">
+                <ComboBox Margin="0 0 5 0" Width="200" Height="25" Style="{DynamicResource ComboBox}" ItemsSource="{Binding Users, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedUser, UpdateSourceTrigger=PropertyChanged}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <DockPanel>
+                                <TextBlock DockPanel.Dock="Left" Text="{Binding Path=Name}"/>
+                                <TextBlock DockPanel.Dock="Right" FontSize="12" Text="{Binding Path=UserId}" FontWeight="Bold" HorizontalAlignment="Right" Margin="5 0"/>
+                            </DockPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <ComboBox Margin="5 0" Width="200" Height="25" Style="{DynamicResource ComboBox}" ItemsSource="{Binding Cabinets, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedCabinet, UpdateSourceTrigger=PropertyChanged}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <DockPanel>
+                                <TextBlock DockPanel.Dock="Left" Text="{Binding Path=Name}"/>
+                                <TextBlock DockPanel.Dock="Right" FontSize="12" Text="{Binding Path=CabinetId}" FontWeight="Bold" HorizontalAlignment="Right" Margin="5 0"/>
+                            </DockPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <ComboBox Margin="5 0" Width="200" Height="25" Style="{DynamicResource ComboBox}" ItemsSource="{Binding Specialities, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedSpeciality, UpdateSourceTrigger=PropertyChanged}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <DockPanel>
+                                <TextBlock DockPanel.Dock="Left" Text="{Binding Path=Name}"/>
+                                <TextBlock DockPanel.Dock="Right" FontSize="12" Text="{Binding Path=SpecialityId}" FontWeight="Bold" HorizontalAlignment="Right" Margin="5 0"/>
+                            </DockPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <Button Content="Добавить доктора" Style="{StaticResource Button}" Command="{Binding AddDoctor}" Width="110" FontSize="11" Margin="10 0 0 0" FontWeight="DemiBold" VerticalAlignment="Top"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Сохранить изменения" Style="{StaticResource Button}" Command="{Binding SaveChanges}" Width="250" Margin="10 0"/>
+            <Button Content="Обновить данные таблицы" Style="{StaticResource Button}" Command="{Binding Update}" Width="250" Margin="10 0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,21 @@
+{
+	"1": ["Начальная... Требуется Advanced-лицензия!", "index.htm", []],
+	"2": ["1. Регистрац... Требуется Advanced-лицензия!", "registratsiya_v_sisteme.htm", []],
+	"3": ["1.1. Ввод данных... Требуется Advanced-лицензия!", "vvod_dannykh_novogo_akkaunta.htm", [1]],
+	"4": ["1.2. Рег... Требуется Advanced-лицензия!", "registratsiya.htm", [1]],
+	"5": ["2. Авторизац... Требуется Advanced-лицензия!", "avtorizatsiya_v_sisteme.htm", []],
+	"6": ["2.1. Ввод данн... Требуется Advanced-лицензия!", "vvod_dannykh_ot_akkaunta.htm", [2]],
+	"7": ["2.2. Авт... Требуется Advanced-лицензия!", "avtorizatsiya.htm", [2]],
+	"8": ["2.3. Восстано... Требуется Advanced-лицензия!", "vosstanovlenie_parolya.htm", [2]],
+	"9": ["3. Личны... Требуется Advanced-лицензия!", "lichnyj_kabinet.htm", []],
+	"10": ["3.1. Редакти... Требуется Advanced-лицензия!", "redaktirovanie_pochty.htm", [3]],
+	"11": ["3.2. Измен... Требуется Advanced-лицензия!", "izmenenie_parolya.htm", [3]],
+	"12": ["4. Запись... Требуется Advanced-лицензия!", "zapis_na_priem.htm", []],
+	"13": ["4.1. Выбор спец... Требуется Advanced-лицензия!", "vybor_spetsialnosti_vracha.htm", [4]],
+	"14": ["4.2. Выб... Требуется Advanced-лицензия!", "vybor_vracha.htm", [4]],
+	"15": ["4.3. Выбор талона... Требуется Advanced-лицензия!", "vybor_talona_i_rezervirovanie.htm", [4]],
+	"16": ["5. Панель ад... Требуется Advanced-лицензия!", "panel_administratora.htm", []],
+	"17": ["5.1. Навиг... Требуется Advanced-лицензия!", "navigatsiya_po_bd.htm", [5]],
+	"18": ["5.2. Добавление... Требуется Advanced-лицензия!", "dobavlenie_talonov_vracham.htm", [5]],
+	"19": ["5.3. Добавление... Требуется Advanced-лицензия!", "dobavlenie_novogo_doktora.htm", [5]]
+}
